@@ -81,17 +81,17 @@ gulp.task('sass', () => {
     .pipe(browserSync.stream());
 });
 
-// gulp.task('less', () => {
-//   return gulp.src([ src_assets_folder + 'less/**/!(_)*.less'], { since: gulp.lastRun('less') })
-//     .pipe(sourcemaps.init())
-//       .pipe(plumber())
-//       .pipe(less())
-//       .pipe(autoprefixer())
-//       .pipe(minifyCss())
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest(dist_assets_folder + 'css'))
-//     .pipe(browserSync.stream());
-// });
+gulp.task('less', () => {
+  return gulp.src([ src_assets_folder + 'less/**/!(_)*.less'], { since: gulp.lastRun('less') })
+    .pipe(sourcemaps.init())
+      .pipe(plumber())
+      .pipe(less())
+      .pipe(autoprefixer())
+      .pipe(minifyCss())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dist_assets_folder + 'css'))
+    .pipe(browserSync.stream());
+});
 
 gulp.task('stylus', () => {
   return gulp.src([ src_assets_folder + 'stylus/**/!(_)*.styl'], { since: gulp.lastRun('stylus') })
