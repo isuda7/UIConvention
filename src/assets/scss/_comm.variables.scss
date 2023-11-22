@@ -1,0 +1,74 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Variables
+//	속성순서 : Colors, 
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Color (-Opacity, -Light, -Dark)
+//-------------------------------------------------------------------
+// Brand Color 
+$ColorPrimary: #000;
+$ColorSecondary: #000;
+$ColorHighlight: #000;
+
+// State Color
+$ColorPositive: #000;
+$ColorNegative: #000;
+
+// Item Color
+$ColorName1: #000;
+$ColorName2: #000;
+
+// Grayscale
+$GrayTextButton: #000;
+$GrayTextLabel: #000;
+$GrayBorderHeader: #000;
+$GrayBorderContent: #000;
+
+//-------------------------------------------------------------------
+//	@Size (Width-, Height-, Gap-)
+//-------------------------------------------------------------------
+// Layout
+$WidthBody: 1200px;
+$HeightAppbar: 60px;
+$GapBody: 20px;
+
+//-------------------------------------------------------------------
+//	@Text
+//-------------------------------------------------------------------
+// Fonts
+@mixin FontBody10 {font-size:1.0rem;line-height: 1.6rem;}
+@mixin FontBody12 {font-size:1.2rem;line-height: 1.8rem;}
+@mixin FontBody13 {font-size:1.3rem;line-height: 1.9rem;}
+@mixin FontBody14 {font-size:1.4rem;line-height: 2.2rem;}
+@mixin FontBody15 {font-size:1.5rem;line-height: 2.3rem;}
+@mixin FontBody16 {font-size:1.6rem;line-height: 2.4rem;}
+@mixin FontTitle10 {font-size:1rem;line-height: 1.6rem;font-weight: 700;}
+@mixin FontTitle13 {font-size:1.3rem;line-height: 1.7rem;font-weight: 700;}
+@mixin FontTitle14 {font-size:1.4rem;line-height: 1.8rem;font-weight: 700;}
+@mixin FontTitle15 {font-size:1.5rem;line-height: 1.9rem;font-weight: 700;}
+@mixin FontTitle16 {font-size:1.6rem;line-height: 2.0rem;font-weight: 700;}
+@mixin FontTitle18 {font-size:1.8rem;line-height: 2.4rem;font-weight: 700;}
+@mixin FontTitle20 {font-size:2.0rem;line-height: 2.6rem;font-weight: 700;}
+@mixin FontTitle22 {font-size:2.2rem;line-height: 2.8rem;font-weight: 700;}
+
+// Word
+@mixin Ellipsis1 {display:block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+@mixin Ellipsis2 {display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+@mixin Ellipsis3 {display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+@mixin Ellipsis4 {display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 4;-webkit-box-orient: vertical;}
+
+//-------------------------------------------------------------------
+//	@Util
+//-------------------------------------------------------------------
+// Split
+@mixin SplitBar {position: relative;top:1px;display:block;width:1px;height:1.2rem;background-color: #A4A6AA;margin:0 0.8rem;}
+
+// Shadow
+@mixin Shadow1 {box-shadow:0px 0.1rem 0.1rem rgba(0, 0, 0, 0.02), 0 0.2rem 0.1rem rgba(0, 0, 0, 0.04), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06);}
+@mixin Shadow2 {box-shadow:0px 0.4rem 0.5rem rgba(0, 0, 0, 0.02), 0 0.1rem 1rem rgba(0, 0, 0, 0.04), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.06);}
+@mixin Shadow3 {box-shadow:0px 1.2rem 1.7rem rgba(0, 0, 0, 0.02), 0 0.5rem 2.2rem rgba(0, 0, 0, 0.04), 0 0.7rem 0.8rem rgba(0, 0, 0, 0.06);}
+@mixin Shadow4 {box-shadow:0px 2.4rem 38px rgba(0, 0, 0, 0.02), 0 0.9rem 4.6rem rgba(0, 0, 0, 0.04), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.06);}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------
