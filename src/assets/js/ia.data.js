@@ -106,6 +106,7 @@ for (let i = 0; i < ia.length; i++){
 		+'			</button>'
 		+'		</li>'
 	}
+	ia_html = ia_html + ''
 	+'		<!-- //Sample -->'
 	+'	</ul>'
 	+'</div>';
