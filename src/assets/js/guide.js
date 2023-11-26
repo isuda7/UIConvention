@@ -9,3 +9,9 @@ function guideGnbOpen(wrap, menu, _this){
 function guideGnbClose(wrap){
     $(wrap).removeClass('is-active');
 }
+function guideSecToggle(_this){
+	$(_this).toggleClass('is-hide').parent().next().toggle();
+}
+function guideIAToggle(_this){
+	$(_this).toggleClass('is-active').prev().toggle();
+}

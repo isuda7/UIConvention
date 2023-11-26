@@ -1,13 +1,13 @@
 //-------------------------------------------------------------------
 //	분류그룹 : Variables
-//	속성순서 : Colors, 
+//	속성순서 : Colors,
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 //	@Color (-Opacity, -Light, -Dark)
 //-------------------------------------------------------------------
-// Brand Color 
-$ColorPrimary: #000;
-$ColorSecondary: #000;
+// Brand Color
+$ColorPrimary: red;
+$ColorSecondary: rgb(27, 32, 50);
 $ColorHighlight: #000;
 
 // State Color
@@ -68,6 +68,83 @@ $GapBody: 20px;
 @mixin Shadow2 {box-shadow:0px 0.4rem 0.5rem rgba(0, 0, 0, 0.02), 0 0.1rem 1rem rgba(0, 0, 0, 0.04), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.06);}
 @mixin Shadow3 {box-shadow:0px 1.2rem 1.7rem rgba(0, 0, 0, 0.02), 0 0.5rem 2.2rem rgba(0, 0, 0, 0.04), 0 0.7rem 0.8rem rgba(0, 0, 0, 0.06);}
 @mixin Shadow4 {box-shadow:0px 2.4rem 38px rgba(0, 0, 0, 0.02), 0 0.9rem 4.6rem rgba(0, 0, 0, 0.04), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.06);}
+
+//-------------------------------------------------------------------
+//	@Responsive
+//  Device : Basic (Extra Large ~ Mini)
+//  PC : 1920 ~ 1280 (1920 ~ 1601 / 1600 ~ 1280)
+//  TA : 1279 ~  768 (1279 ~ 1025 / 1024 ~  768)
+//  MO :  767 ~  320 ( 767 ~  421 /  420 ~  320)
+//  기준디바이스 : iPad Mini (768/1024), iPadPro (1024/1366)
+//-------------------------------------------------------------------
+// Basic Devices
+@mixin pc() {
+	@media (min-width:1280px) {
+		@content;
+	}
+}
+@mixin tablet(){
+	@media (max-width:1279px) {
+		@content;
+	}
+}
+@mixin mobile(){
+	@media (max-width:767px) {
+		@content;
+	}
+}
+@mixin portrait(){
+	@media (orientation:Portrait) {
+		@content;
+	}
+}
+@mixin landscape(){
+	@media (orientation:Landscape) {
+		@content;
+	}
+}
+
+// Extra Devices
+@mixin pcLarge(){
+	@media (min-width:1601px) {
+		@content;
+	}
+}
+@mixin pcMini(){
+	@media (min-width:1280px) and (min-width:1600px) {
+		@content;
+	}
+}
+@mixin tabletLarge(){
+	@media (min-width:768px) and (min-width:1023px) {
+		@content;
+	}
+}
+@mixin tabletMini(){
+	@media (min-width:1024px) and (min-width:1279px) {
+		@content;
+	}
+}
+@mixin mobileLarge(){
+	@media (max-width:421px) and (max-width:767px) {
+		@content;
+	}
+}
+@mixin mobileMini(){
+	@media (max-width:420px) {
+		@content;
+	}
+}
+@mixin mobilePortrait(){
+	@media (max-width:767px) and (orientation:Portrait) {
+		@content;
+	}
+}
+@mixin mobileLandscape(){
+	@media (max-height:1024px) and (orientation:Landscape) {
+		@content;
+	}
+}
 
 //-------------------------------------------------------------------
 //	@Styles
