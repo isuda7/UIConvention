@@ -21,15 +21,24 @@
 }
 
 // Layout
-.g-header {display:flex; flex-direction: column; justify-content: flex-start; align-items: center; position: fixed; top: 0; left: 0; z-index: 100; width: var(--header-height); height: 100%; padding: 0px 0; background-color: #000; color: #000;}
+.g-header {display:flex; flex-direction: column; justify-content: flex-start; align-items: center; position: fixed; top: 0; left: 0; z-index: 100; width: var(--header-height); height: 100%; padding: 0px 0;}
 
 // Header
 .g-logo {display: none; margin-right: auto;}
 .g-logo-link {font-size: 20px; font-weight: 400;}
-.g-gnb {display: flex; flex-direction: column; width:var(--header-height); gap: 10px;}
-.g-gnb-btn {display: flex; flex-direction: column; align-items: center; justify-content: center; width: var(--header-width); height: var(--header-height); color: rgba(255,255,255,0.9); transition: all 0.2s ease; font-weight: 400;}
-.g-gnb-btn .text {display:block; margin-top: 4px; font-size: 12px;}
-.g-gnb-btn:focus, .g-gnb-btn:hover {background-color: #333; color: rgba(255,255,255,1); font-weight: 500;}
-.g-gnb-btn.is-selected {background-color: #fff; color: #000;}
-.g-gnb-sub {position: fixed; left: var(--header-width); top: 0; display: flex; flex-direction: column;}
-.g-gnb-sub.is-active {}
+.g-gnb {position: relative; z-index: 20; display: flex; flex-direction: column; width:var(--header-height); height: 100%; background-color: #000; color: #000;}
+.g-menu {display: flex; flex-direction: column; gap: 10px;}
+.g-menu .g-menu-btn {display: flex; flex-direction: column; align-items: center; justify-content: center; width: var(--header-width); height: var(--header-height); color: rgba(255,255,255,0.9); transition: all 0.2s ease; font-weight: 400;}
+.g-menu .g-menu-btn .text {display:block; margin-top: 4px; font-size: 12px;}
+.g-menu .g-menu-btn:focus,
+.g-menu .g-menu-btn:hover {background-color: #333; color: rgba(255,255,255,1); font-weight: 500;}
+.g-menu .g-menu-btn.is-selected {background-color: #fff; color: #000;}
+
+.g-gnb-sub {position: fixed; left: var(--header-width); top: 0; width: 160px; height: 100%; z-index: 10; display: flex; flex-direction: column; background-color: #Fff; border-right:1px solid #ddd; visibility: visible;transition: all 0.25s ease; transform: translateX(-100%); padding-top: 40px;}
+.g-gnb-sub.is-active {visibility: visible; transform: translateX(0);}
+.g-menu-sub {flex-direction: column; display: none;}
+.g-menu-sub.is-visible {display: flex;}
+.g-menu-sub .g-menu-btn {padding: 10px 20px;}
+
+.g-gnb-sub-close {position: absolute; right: 10px; top: 10px;}
+.g-gnb-sub-close .btn {padding: 0;}

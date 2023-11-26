@@ -59,7 +59,7 @@ gulp.task('html', () => {
 });
 
 gulp.task('ejs', () => {
-	return gulp.src(src_folder + 'ejs/**/!(_)*.ejs')
+	return gulp.src(src_folder + '**/*.ejs')
 	.pipe(ejs({ title: 'gulp-ejs' }))
 	.pipe(rename({ extname: '.html' }))
 	.pipe(gulp.dest(dist_folder));
@@ -202,7 +202,7 @@ gulp.task('watch', () => {
 
   const watch = [
     src_folder + '**/*.html',
-    src_folder + 'ejs/**/*.ejs',
+    src_folder + '**/*.ejs',
     src_assets_folder + 'sass/**/*.sass',
     src_assets_folder + 'scss/**/*.scss',
     src_assets_folder + 'less/**/*.less',
