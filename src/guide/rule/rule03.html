@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Style Guide</title>
+    <!-- https://fonts.google.com/icons -->
+	<link rel="shortcut icon" href="../assets/images/app/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.styles.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/guide.styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../assets/js/guide.js"></script>
+
+    <link href="../codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />
+    <script src="../codeview/scripts/shCore.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shAutoLoader.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushjScript.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushXml.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushCss.js?cb=undefined"></script>
+    <script>SyntaxHighlighter.all();</script></head>
+<body>
+    <div class="g-wrapper">
+        <header class="g-header">
+            <script>
+                $('.g-header').load('../_include/_header.html', function(){
+                    guideGnbSet(this, 1, 2);
+                });
+            </script>
+        </header>
+        <main role="main" class="g-main">
+            <div class="g-section">
+				<div class="g-h1-head">
+					<h1 class="g-h1">코드규칙</h1>
+					<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+						<span class="material-symbols-outlined">expand_circle_down</span>
+					</button>
+				</div>
+                <div class="g-h1-body">
+                    <!-- section1 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">HTML</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">들여쓰기</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <ul class="g-desc">
+                                <li>1탭 들여쓰기 하며, 1탭의 크기는 공백 4칸으로 설정한다.</li>
+                            </ul>
+                        </div>
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">빈줄</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <ul class="g-desc">
+                                <li>가독성을 고려하여 빈 줄을 추가 할 수 있다. 단 연속적으로 1줄을 초과하지 않는다.</li>
+                            </ul>
+                        </div>
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">주석</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <h4 class="g-h4">영역주석</h4>
+                            <div class="g-code">
+                                <div><div id="highlighter_719587" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 영역명 --&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">p</code><code class="html plain">&gt;시작과 끝이 있고, 마크업의 영역을 표시한다.&lt;/</code><code class="html keyword">p</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html comments">&lt;!-- //영역명 --&gt;</code></div></div></td></tr></tbody></table></div></div>
+                            </div>
+                            <h4 class="g-h4">설명주석</h4>
+                            <div class="g-code">
+                                <div><div id="highlighter_429931" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 설명내용 --&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">p</code><code class="html plain">&gt;시작과 끝이 없고, 설명할 내용을 주석으로 표기한다. &lt;/</code><code class="html keyword">p</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+                            </div>
+                            <h4 class="g-h4">조건주석</h4>
+                            <div class="g-code">
+                                <div><div id="highlighter_547178" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html comments">&lt;!-- Case 로그인 --&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html plain">범위가 넓은 경우</code></div><div class="line number4 index3 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html comments">&lt;!-- //Case 로그인 --&gt;</code></div><div class="line number6 index5 alt1"><code class="html comments">&lt;!-- Case 로그아웃 --&gt;</code></div><div class="line number7 index6 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html plain">범위가 넓은 경우</code></div><div class="line number9 index8 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html comments">&lt;!-- //Case 로그아웃 --&gt;</code></div></div></td></tr></tbody></table></div></div>
+                            </div>
+                            <h4 class="g-h4">기록주석</h4>
+                            <div class="g-code">
+                                <div><div id="highlighter_456316" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">인라인 주석인 경우 </code><code class="html comments">&lt;!-- 181130 이름 설명 수정/추가/삭제 --&gt;</code></div><div class="line number3 index2 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="html comments">&lt;!-- 181130 설명내용 수정/추가/삭제 --&gt;</code></div><div class="line number6 index5 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">범위가 단순한 경우 닫기 생략</code></div><div class="line number8 index7 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2">&nbsp;</div><div class="line number10 index9 alt1"><code class="html comments">&lt;!-- 181130 이름 설명 수정/추가/삭제 --&gt;</code></div><div class="line number11 index10 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">범위가 넓은 경우 닫기 표기</code></div><div class="line number13 index12 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">범위가 넓은 경우 닫기 표기</code></div><div class="line number16 index15 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number17 index16 alt2"><code class="html comments">&lt;!-- //181130 이름 설명 수정/추가/삭제 --&gt;</code></div></div></td></tr></tbody></table></div></div>
+                            </div>
+                        </div>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">속성 선언순서</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <div class="g-tbl-type1">
+                                <table>
+                                    <caption>HTML 속성선언순서</caption>
+                                    <colgroup>
+                                        <col style="width:20%;">
+                                        <col>
+                                        <col style="width:20%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>속성</th>
+                                            <th>속성 값</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1. 기능</td>
+                                            <td>
+                                                <p>href, src, type</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2. 이름</td>
+                                            <td>
+                                                <p>name, id</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3. 정보</td>
+                                            <td>
+                                                <p>replaceholder, title, alt, value</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4. 옵션</td>
+                                            <td>
+                                                <p>target, tabindex</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5. 역할</td>
+                                            <td>
+                                                <p>role</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6. 속성</td>
+                                            <td>
+                                                <p>aria-controls, aria-describedby, aria-labelledby, aria-popup, aria-modal 등</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. 꾸미기</td>
+                                            <td>
+                                                <p>class</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8. 상태</td>
+                                            <td>
+                                                <p>checked, disabled, selected, required, aria-selected, aria-current, aria-hidden 등</p>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="g-h4">엘리먼트 예시</h4>
+                            <div class="g-code">
+                                <pre class="brush:html">
+                                    &lt;a href="#none" title="새창열기" target="" class=""&gt;인쇄하기&lt;/a&gt;
+                                    &lt;iframe src="about:blank" title="빈프레임"&gt;&lt;/iframe&gt;
+                                    &lt;img src="img.gif" alt="대체텍스트" /&gt;
+                                    &lt;input type="text" name="" id="" value="" title="" class="" disabled /&gt;
+                                </pre>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //section1 -->
+    
+                    <!-- section2 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">CSS</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">CSS 기본 규칙</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <h4 class="g-h4">작업정보</h4>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    @charset "utf-8";
+                                    /*-------------------------------------------------------------------
+                                        파일정의: 
+                                        속성순서: 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+                                    -------------------------------------------------------------------*/
+                                </pre>
+                            </div>
+                            <ul class="g-desc-guide">
+                                <li>작업정보는 위 사항을 필수정보로 제공한다.</li>
+                            </ul>
+    
+                            <h4 class="g-h4">작은 따옴표('') 사용 범위</h4>
+                            <p class="g-desc">폰트의 선언, filter, content에 작은 따옴표('')를 사용한다.</p>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    .class-name {font-family:'dotum';}
+                                    .filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img.png', sizingMethod='scale';}
+                                    .class-nam//after{content:'.'}
+                                    .class-name {background:url(img.gif) no-repeat}
+                                </pre>
+                            </div>
+    
+                            <h4 class="g-h4">세미콜론(;)</h4>
+                            <p class="g-desc">마지막 선언된 속성에도 세미콜론(;)을 사용한다.</p>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    .class-name {margin-left:0; padding-left:10px;}
+                                </pre>
+                            </div>
+    
+                            <h4 class="g-h4">공백의 사용</h4>
+                            <p class="g-desc">선택자 간, 중괄호간 한칸의 공백을 사용한다, 중괄호 안쪽 좌우에는 공백은 사용하지 않는다.</p>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    .class-name,
+                                    .class-name .child-class {background:url(../img/img.gif) no-repeat;}
+                                    .class-name {padding:0; margin:0;}
+                                    .class-name {padding:0; margin:0;}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">들여쓰기 / 줄 바꿈</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <ul class="g-desc">
+                                <li>CSS 코드 작성시 들여쓰기는 허용하지 않는다.</li>
+                                <li>공통으로 사용되는 속성의 선택자간의 줄 바꿈은 허용하며 이 외의 줄바꿈은 허용하지 않는다.</li>
+                            </ul>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    h4.class-name {font-siz//1.25em; letter-spacing:-1px; margin:0.5em 0 0 0;}
+    
+                                    .class-name,
+                                    .class-name .child-class {background:url(../img/img.gif) no-repeat;}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">주석 / 빈줄</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <ul class="g-desc">
+                                <li>종료 주석은 작성하지 않는다.</li>
+                                <li>코드 그룹 간 1줄의 빈 줄을 허용한다. 단, 1줄을 초과하지 않는다.</li>
+                            </ul>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    /* title */
+                                    .title-type1 {margin:30px 0 10px 0;}
+    
+                                    /* description */
+                                    .desc1 {padding:2px 0 0 15px; font-siz//0.917em;}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">선택자</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <h4 class="g-h4">공통 선택자</h4>
+                            <p class="g-desc">'*' 공통 선택자는 웹 페이지의 성능을 저하를 가져오기 때문에 가급적 사용하지 않는다.</p>
+                            <div class="g-code">
+                                <pre class="brush:css">
+                                    /* 잘못된 예 */
+                                    * {margin:0; padding:0}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">속성 선언순서</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <div class="g-tbl-type1">
+                                <table>
+                                    <caption>CSS 속성선언순서</caption>
+                                    <colgroup>
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>속성</th>
+                                            <th>속성 값</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1. 표시</td>
+                                            <td>display</td>
+                                            <td>none, block, inline, inline-block, inline-table, list-item, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group</td>
+                                        </tr>
+                                        <tr>
+                                            <td>visibility</td>
+                                            <td>visible, hidden, collapse</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">2. 위치</td>
+                                            <td>position</td>
+                                            <td>absolute, fixed, relative, static</td>
+                                        </tr>
+                                        <tr>
+                                            <td>top, right, bottom, left</td>
+                                            <td>length(px), %</td>
+                                        </tr>
+                                        <tr>
+                                            <td>z-index</td>
+                                            <td>number</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">3. 넘침/흐름</td>
+                                            <td>overflow</td>
+                                            <td>visible, hidden, scroll, auto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>float</td>
+                                            <td>left, right, none</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">4. 크기/간격</td>
+                                            <td>width, max-width, min-width</td>
+                                            <td>auto, length(px), %</td>
+                                        </tr>
+                                        <tr>
+                                            <td>height, max-height, min-height</td>
+                                            <td>auto, length(px), %</td>
+                                        </tr>
+                                        <tr>
+                                            <td>margin</td>
+                                            <td>auto, length(px, em), %</td>
+                                        </tr>
+                                        <tr>
+                                            <td>padding</td>
+                                            <td>auto, length(px, em), %</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">5. 박스모양</td>
+                                            <td>border</td>
+                                            <td>border-width, border-style, border-color</td>
+                                        </tr>
+                                        <tr>
+                                            <td>background</td>
+                                            <td>background-color, background-image, background-repeat, background-attachment, background-position</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">6. 폰트/정렬</td>
+                                            <td>font</td>
+                                            <td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+                                        </tr>
+                                        <tr>
+                                            <td>color</td>
+                                            <td>hex_number, hex_number</td>
+                                        </tr>
+                                        <tr>
+                                            <td>text-align</td>
+                                            <td>left, right, center, justify</td>
+                                        </tr>
+                                        <tr>
+                                            <td>vertical-align</td>
+                                            <td>top, middle, bottom, baseline</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7. 기타</td>
+                                            <td></td>
+                                            <td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //section2 -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

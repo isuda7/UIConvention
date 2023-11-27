@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Style Guide</title>
+    <!-- https://fonts.google.com/icons -->
+	<link rel="shortcut icon" href="../assets/images/app/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.styles.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/guide.styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../assets/js/guide.js"></script>
+</head>
+<body>
+    <div class="g-wrapper">
+        <header class="g-header">
+            <script>
+                $('.g-header').load('../_include/_header.html', function(){
+                    guideGnbSet(this, 1, 3);
+                });
+            </script>
+        </header>
+        <main role="main" class="g-main">
+            <div class="g-section">
+				<div class="g-h1-head">
+					<h1 class="g-h1">네임규칙</h1>
+					<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+						<span class="material-symbols-outlined">expand_circle_down</span>
+					</button>
+				</div>
+                <div class="g-h1-body">
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">표기법</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-tbl-type1">
+                            <table>
+                                <caption>공통 네이밍 규칙 예</caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>종류</th>
+                                        <th>구분</th>
+                                        <th>번호</th>
+                                        <th>예시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-l">ID Selector</td>
+                                        <td class="align-l">카멜표기법 (camelCase)</td>
+                                        <td class="align-l">한 자리수 (생략가능, 2, 3)</td>
+                                        <td class="align-l">errorMesage, controlCenter, controlCenter2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-l">Class Selector</td>
+                                        <td class="align-l">스네이크 표기법 (hyphen-nate)</td>
+                                        <td class="align-l">한 자리수 (생략가능, 2, 3)</td>
+                                        <td class="align-l">tab-page, tbl-type1, tbl-type2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-l">Image</td>
+                                        <td class="align-l">스네이크 표기법 (underbar_nate)</td>
+                                        <td class="align-l">두 자리수 (01, 02, 03)</td>
+                                        <td class="align-l">btn_cancle01_off.gif</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-l">파일 및 폴더</td>
+                                        <td class="align-l">스네이크 표기법 (underbar_nate)</td>
+                                        <td class="align-l">두 자리수 (01, 02, 03)</td>
+                                        <td class="align-l">board_list.html</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">예약어</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-tbl-type1">
+                            <table>
+                                <caption>예약어</caption>
+                                <colgroup><col span="2" style="width:25%;"><col></colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>예약어</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="9">레이아웃</td>
+                                        <td>wrapper</td>
+                                        <td>전체 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>skipnav</td>
+                                        <td>바로가기 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>header</td>
+                                        <td>머리글 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>container</td>
+                                        <td>페이지 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>content</td>
+                                        <td>본문 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>footer</td>
+                                        <td>바닥글 영역</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">그룹핑</td>
+                                        <td>-wrap</td>
+                                        <td>전체 영역</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-area</td>
+                                        <td>지역 영역</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="5">컴포넌트</td>
+                                        <td>[컴포넌트]</td>
+                                        <td>형태 기본</td>
+                                    </tr>
+                                    <tr>
+                                        <td>module-[순서]</td>
+                                        <td>모듈 유형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>type-[의미]</td>
+                                        <td>상세 유형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[옵션]</td>
+                                        <td>강조, 크기, 방향 등</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">기타</td>
+                                        <td>is-[상태]</td>
+                                        <td>상태</td>
+                                    </tr>
+                                    <tr>
+                                        <td>has-[요소]</td>
+                                        <td>요소</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">이미지 네이밍 규칙</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-tbl-type1">
+                            <table>
+                                <caption>이미지 예약어</caption>
+                                <colgroup><col span="2" style="width:25%;"><col></colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>분류</th>
+                                        <th>파일명</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>아이콘</td>
+                                        <td>icon_</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>아바타</td>
+                                        <td>avata_</td>
+                                        <td>프로필 이미지</td>
+                                    </tr>
+                                    <tr>
+                                        <td>썸네일</td>
+                                        <td>thumb_</td>
+                                        <td>게시글 이미지</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일반</td>
+                                        <td>img_</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>임시</td>
+                                        <td>@</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

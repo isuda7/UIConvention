@@ -21,7 +21,200 @@
             </script>
         </header>
         <main role="main" class="g-main">
-
+            <div class="g-section">
+				<div class="g-h1-head">
+					<h1 class="g-h1">기본규칙</h1>
+					<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+						<span class="material-symbols-outlined">expand_circle_down</span>
+					</button>
+				</div>
+                <div class="g-h1-body">
+                    <!-- section1 -->
+					<div class="g-h2-head">
+						<h2 class="g-h2">프로젝트 환경</h2>
+						<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+							<span class="material-symbols-outlined">expand_circle_down</span>
+						</button>
+					</div>
+                    <div class="g-h2-body">
+                        <div class="g-tbl-type1">
+                            <table>
+                                <caption>환경정의</caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="align-l">문서 및 버전</th>
+                                        <td>HTML5, CSS3</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-l">인코딩</th>
+                                        <td>UTF-8</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-l">웹 유형</th>
+                                        <td>반응형 웹</td>
+                                        <!-- PC Web | Mobile Web | Responsive Web | Mobile Hybrid Web -->
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-l">PC 웹 호환성</th>
+                                        <td>
+                                            <div class="g-browser-icons">
+                                                Edge, Chrome, Firefox, Sapfari
+                                            </div>
+                                            <style type="text/css">
+                                                .g-browser-icons img {width:30px; height:30px;}
+                                            </style>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-l">Mobile 웹 호환성</th>
+                                        <td>
+                                            <div class="g-browser-icons">
+                                                Sapfari, Chrome, Samsung
+                                            </div>
+                                            <style type="text/css">
+                                                .g-browser-icons img {width:30px; height:30px;}
+                                            </style>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <th scope="row" class="align-l">웹 접근성</th>
+                                        <td>기본준수(A레벨)</td>
+                                    </tr> -->
+                                    <tr>
+                                        <th scope="row" class="align-l">해상도 정책</th>
+                                        <td>
+                                            PC UI : 1024 ~<br>
+                                            MO UI : ~ 1023 <br>
+                                            각 디바이스별 구간에서 반응형 처리
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- //section1 -->
+                    <!-- section2 -->
+					<div class="g-h2-head">
+						<h2 class="g-h2">파일/폴더 규칙</h2>
+						<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+							<span class="material-symbols-outlined">expand_circle_down</span>
+						</button>
+					</div>
+                    <div class="g-h2-body">
+                        <p class="g-desc">분류폴더 위치: /assets/</p>
+                        <div class="g-tbl-type1">
+                            <table>
+                                <caption>파일구조</caption>
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:30%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>분류 폴더</th>
+                                        <th>서브 폴더</th>
+                                        <th>파일 이름</th>
+                                        <th>파일 설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>fonts</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            웹폰트
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>css</td>
+                                        <td></td>
+                                        <td>
+                                            librarys.min.css<br>
+                                            base.css<br>
+                                            utilities.css<br>
+                                            layout.css<br>
+                                            components.css<br>
+                                            content.css
+                                        </td>
+                                        <td>
+                                            스타일 - 라이브러리<br>
+                                            스타일 - 초기화<br>
+                                            스타일 - 유틸리티<br>
+                                            스타일 - 레이아웃<br>
+                                            스타일 - 컴포넌트<br>
+                                            스타일 - 컨텐츠
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>js</td>
+                                        <td>libs</td>
+                                        <td>
+                                            jquery.min.js<br>
+                                            librurys.min.js
+                                        </td>
+                                        <td>
+                                            스크립트 - Jquery Core<br>
+                                            스크립트 - All Librurys
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>ui</td>
+                                        <td>
+                                            ui.common.js<br>
+                                            ui.components.js<br>
+                                            ui.contents.js<br>
+                                            ui.init.js
+                                        </td>
+                                        <td>
+                                            스크립트 - UI 공통<br>
+                                            스크립트 - UI 컴포넌트<br>
+                                            스크립트 - UI 컨텐츠<br>
+                                            스크립트 - UI Init
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>img</td>
+                                        <td>
+                                            common<br>
+                                            content<br>
+                                            main<br>
+                                            temp
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            이미지 - 공통<br>
+                                            이미지 - 서브<br>
+                                            이미지 - 메인<br>
+                                            이미지 - 샘플<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>html</td>
+                                        <td>
+                                            _layout<br>
+                                            [menus]
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            공통페이지<br>
+                                            메뉴페이지
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- //section2 -->
+                </div>
+            </div>
         </main>
     </div>
 </body>

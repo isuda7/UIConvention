@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Style Guide</title>
+    <!-- https://fonts.google.com/icons -->
+	<link rel="shortcut icon" href="../assets/images/app/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.styles.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/guide.styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../assets/js/guide.js"></script>
+
+    <link href="../codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />
+    <script src="../codeview/scripts/shCore.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shAutoLoader.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushjScript.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushXml.js?cb=undefined"></script>
+    <script src="../codeview/scripts/shBrushCss.js?cb=undefined"></script>
+    <script>SyntaxHighlighter.all();</script>
+</head>
+<body>
+    <div class="g-wrapper">
+        <header class="g-header">
+            <script>
+                $('.g-header').load('../_include/_header.html', function(){
+                    guideGnbSet(this, 1, 4);
+                });
+            </script>
+        </header>
+        <main role="main" class="g-main">
+            <div class="g-section">
+				<div class="g-h1-head">
+					<h1 class="g-h1">설계규칙</h1>
+					<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+						<span class="material-symbols-outlined">expand_circle_down</span>
+					</button>
+				</div>
+                <div class="g-h1-body">
+                    <!-- section1 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">HTML</h2>
+                    </div>
+                    <div class="g-h2-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode1-1" class="g-example-btn is-active">Document</a>
+									<a href="#tabContentCode1-2" class="g-example-btn">Wrapper</a>
+									<a href="#tabContentCode1-5" class="g-example-btn">Popup</a>
+								</div>
+							</div>
+							<div id="tabContentCode1-1" class="g-example-footer is-active">
+								<pre class="brush:html">
+									&lt;!DOCTYPE html>
+									&lt;html lang="ko">
+									&lt;head>
+									&lt;meta charset="utf-8">
+									&lt;meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+									&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+									&lt;meta name="keywords" content="Hausys in story">
+									&lt;meta name="description" content="Hausys in story">
+									&lt;title>분류명 - 페이지명 | Hausys in story&lt;/title>
+									&lt;script src="/js/suhyup.js"></script>
+									&lt;/head>
+									&lt;body>
+									&lt;/body>
+									&lt;/html>
+								</pre>
+							</div>
+							<div id="tabContentCode1-2" class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="wrapper">
+										&lt;!-- Header -->
+										&lt;header class="header">&lt;/header>
+										&lt;!-- //Header -->
+
+										&lt;!-- Container -->
+										&lt;main role="main" class="container">
+											&lt;!-- Content -->
+											&lt;div id="content" class="content">
+												&lt;div class="content-head">&lt;/div>
+												&lt;div class="content-body">&lt;/div>
+											&lt;/div>
+											&lt;!-- //Content -->
+											&lt;/main>
+										&lt;!-- //Container -->
+
+										&lt;!-- Footer -->
+										&lt;footer class="footer">&lt;/footer>
+										&lt;!-- //Footer -->
+									&lt;/div>
+								</pre>
+							</div>
+							<div id="tabContentCode1-5" class="g-example-footer">
+								<pre class="brush:html">
+									<!-- Popup -->
+									&lt;div class="popup_wrap" role="dialog" aria-modal="true">
+										&lt;section class="popup">
+											&lt;div class="popup_head">&lt;/div>
+											&lt;div class="popup_body">&lt;/div>
+											&lt;div class="popup_foot">&lt;/div>
+											&lt;div class="popup_close">&lt;/div>
+										&lt;/section>
+									&lt;/div>
+									<!-- //Popup -->
+								</pre>
+							</div>
+						</div>
+                    </div>
+                    <!-- //section1 -->
+    
+                    <!-- section2 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">CSS</h2>
+                    </div>
+                    <div class="g-h2-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode2-2" class="g-example-btn is-active">Common</a>
+									<a href="#tabContentCode2-5" class="g-example-btn">Components</a>
+									<a href="#tabContentCode2-6" class="g-example-btn">Contents</a>
+									<a href="#tabContentCode2-7" class="g-example-btn">Main</a>
+								</div>
+							</div>
+							<div id="tabContentCode2-2" class="g-example-footer is-active">
+								<pre class="brush:css">
+									@charset 'utf-8';
+									/*-------------------------------------------------------------------
+										분류그룹 : 초기화
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										@웹폰트
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@태그
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										분류그룹 : 유틸리티
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+									    @General
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@Grid System
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@Color Set
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										파일이름 : 레이아웃
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										@공통
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@서브공통
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@서브메인
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@메인
+									-------------------------------------------------------------------*/
+								</pre>
+							</div>
+							<div id="tabContentCode2-5" class="g-example-footer">
+								<pre class="brush:css">
+									@charset "utf-8";
+									/*-------------------------------------------------------------------
+										파일이름 : 컴포넌트
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										@Forms
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@Buttons
+									-------------------------------------------------------------------*/
+
+									/*-------------------------------------------------------------------
+										@컴포넌트
+									-------------------------------------------------------------------*/
+								</pre>
+							</div>
+							<div id="tabContentCode2-6" class="g-example-footer">
+								<pre class="brush:css">
+									@charset "utf-8";
+									/*-------------------------------------------------------------------
+										파일이름 : 컨텐츠 스타일
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										@공통화면
+									-------------------------------------------------------------------*/
+									/* 화면명 */
+
+									/*-------------------------------------------------------------------
+										@메뉴명
+									-------------------------------------------------------------------*/
+									/* 서브메뉴명 > 화면명 */
+
+									/*-------------------------------------------------------------------
+										@Popup
+									-------------------------------------------------------------------*/
+									/* 메뉴명 > 화면명 > 팝업명 */
+								</pre>
+							</div>
+							<div id="tabContentCode2-7" class="g-example-footer">
+								<pre class="brush:css">
+									@charset "utf-8";
+									/*-------------------------------------------------------------------
+										파일이름 : 메인, 서브메인
+										속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										@메인
+									-------------------------------------------------------------------*/
+									/* 공통 */
+
+									/* 섹션 */
+
+									/*-------------------------------------------------------------------
+										@서브메인
+									-------------------------------------------------------------------*/
+									/* 공통 */
+
+									/* 섹션 */
+								</pre>
+							</div>
+						</div>
+                    </div>
+                    <!-- //section2 -->
+    
+                    <!-- section3 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">SASS</h2>
+                    </div>
+                    <div class="g-h2-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#none" class="g-example-btn">Settings</a>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									@charset "utf-8";
+									/*-------------------------------------------------------------------
+										파일이름 : Settings
+										참고사항 : 이 파일은 설정값만 정의한다.
+										분류순서 : 기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
+										속성순서 : 레이아웃, 크기여백, 박스모양, 문단모양, 인터렉션
+									-------------------------------------------------------------------*/
+									/*-------------------------------------------------------------------
+										Globals
+									-------------------------------------------------------------------*/
+									/* 여백,간격 */
+									$base-wid: 1200px;
+									$base-gut: 20px;
+
+									/*-------------------------------------------------------------------
+										Color
+									-------------------------------------------------------------------*/
+									/* Point */
+									$color-basic: #333;
+									$color-primary: #0089b3;
+									$color-secondary: #54873c;
+
+									/* Process */
+									$color-success: #47a104;
+									$color-warning: #e9b500;
+									$color-danger: #d45704;
+									$color-error: #ff0000;
+									$color-info: #949494;
+
+									/* Product */
+									$color-pdt1: #47a104;
+									$color-pdt2: #47a104;
+									$color-pdt3: #47a104;
+
+									/*-------------------------------------------------------------------
+										Components
+									-------------------------------------------------------------------*/
+									/* Forms */
+									$input-hei-md: 40px;
+
+									/* Buttons */
+									$button-hei-md: 40px;
+								</pre>
+							</div>
+						</div>
+                    </div>
+                    <!-- //section3 -->
+    
+                    <!-- section4 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">SCRIPT</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#tabContentCode3-1" class="g-example-btn is-active">Common</a>
+								</div>
+							</div>
+							<div id="tabContentCode3-1" class="g-example-footeris-active">
+								<pre class="brush:js">
+									/*--------------------------------------------------------------
+										분류순서
+										@Variables  : 전역변수
+										@Settings   : 기본설정
+										@Utility    : 유틸리티
+										@Layout     : 레이아웃
+										@Components : 공통모듈
+										@Content    : 컨텐츠
+										@Init       : 초기실행
+									--------------------------------------------------------------*/
+									/*--------------------------------------------------------------
+										@Variables
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Settings
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Utilites
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Layouts
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Components
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Contents
+									--------------------------------------------------------------*/
+
+									/*--------------------------------------------------------------
+										@Inits
+									--------------------------------------------------------------*/
+									/* Setting */
+									function set_init(){}
+
+									/* UI */
+									function ui_init(){}
+
+									/* Ready */
+									$(function(){
+										set_init();
+										ui_init();
+									});
+								</pre>
+							</div>
+						</div>
+                    </div>
+                    <!-- //section4 -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

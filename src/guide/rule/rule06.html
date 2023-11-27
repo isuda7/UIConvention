@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Style Guide</title>
+    <!-- https://fonts.google.com/icons -->
+	<link rel="shortcut icon" href="../assets/images/app/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/ui.styles.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/guide.styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../assets/js/guide.js"></script>
+</head>
+<body>
+    <div class="g-wrapper">
+        <header class="g-header">
+            <script>
+                $('.g-header').load('../_include/_header.html', function(){
+                    guideGnbSet(this, 1, 5);
+                });
+            </script>
+        </header>
+        <main role="main" class="g-main">
+            <div class="g-section">
+				<div class="g-h1-head">
+					<h1 class="g-h1">서식명칭</h1>
+					<button type="button" class="btn g-sec-toggle" onclick="guideSecToggle(this)">
+						<span class="material-symbols-outlined">expand_circle_down</span>
+					</button>
+				</div>
+                <div class="g-h1-body">
+                    <!-- section1 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">라벨이 없는 입력 컨트롤의 title 정의</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <ul class="g-desc-list">
+                            <li>웹접근성 리더기에서 컨트롤에 대한 기본 속성을 읽어주므로 '입력', '목록', '선택' 등과 같은 문구는 생략한다.</li>
+                        </ul>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">유형별 명칭</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <h4 class="g-h4">검색</h4>
+                            <form method="post" action="">
+                                <select name="" class="ex-form-basic" title="검색 범위">
+                                    <option value="" selected="">전체</option>
+                                    <option value="">제목</option>
+                                    <option value="">내용</option>
+                                </select>
+                                <input type="text" name="" id="" value="" placeholder="" title="검색 키워드" class="ex-form-basic width-150">
+                                <button type="button" class="ex-btn-basic"><span>검색</span></button>
+                            </form>
+                            <ul class="g-desc-list">
+                                <li>[검색 범위], [검색 키워드], <span class="g-txt-disable">[생략]</span></li>
+                            </ul>
+    
+                            <h4 class="g-h4">정렬</h4>
+                            <form method="post" action="">
+                                <select name="" class="ex-form-basic" title="정렬 기준">
+                                    <option value="" selected="">전체</option>
+                                    <option value="">등록순</option>
+                                    <option value="">조회순</option>
+                                    <option value="">댓글순</option>
+                                </select>
+                                <button type="button" class="ex-btn-basic"><span>확인</span></button>
+                            </form>
+                            <ul class="g-desc-list">
+                                <li>[정렬 기준], <span class="g-txt-disable">[생략]</span></li>
+                            </ul>
+    
+                            <h4 class="g-h4">분류</h4>
+                            <form method="post" action="">
+                                <select name="" class="ex-form-basic" title="분류 범위">
+                                    <option value="" selected="">전체</option>
+                                    <option value="">국내</option>
+                                    <option value="">해외</option>
+                                </select>
+                                <button type="button" class="ex-btn-basic"><span>확인</span></button>
+                            </form>
+                            <ul class="g-desc-list">
+                                <li>[분류 범위], <span class="g-txt-disable">[생략]</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //section1 -->
+    
+                    <!-- section2 -->
+                    <div class="g-h2-head">
+                        <h2 class="g-h2">분할된 입력폼의 title 정의</h2>
+                    </div>
+                    <div class="g-h2-body">
+                        <ul class="g-desc-list">
+                            <li>입력폼이 여러개로 분할된 경우에는 하나의 라벨명으로 의미를 충분히 설명해주지 못하므로 각각의 입력폼에 title을 지정한다.</li>
+                            <li>화면낭독기는 라벨텍스트와 title이 모두 지정된 경우 라벨텍스트만을 읽어주는 것에 주의</li>
+                        </ul>
+
+                        <div class="g-h3-head">
+                            <h3 class="g-h3">유형별 명칭</h3>
+                        </div>
+                        <div class="g-h3-body">
+                            <h4 class="g-h4">일반전화번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[지역 번호] - [국 번호] - [가입자 번호]</li>
+                                <li>[시외 국번] - [시내 국번] - [가입자 번호]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">휴대전화번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[사업자 식별번호] - [국 번호] - [가입자 번호]</li>
+                                <li>[망 식별번호] - [국 번호] - [가입자 번호]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">이메일주소</h4>
+                            <ul class="g-desc-list">
+                                <li>[이메일 사용자 아이디]@[이메일 서비스 도메인]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">주소</h4>
+                            <ul class="g-desc-list">
+                                <li>[우편번호]<br>[기본 주소][상세 주소]</li>
+                                <li>[우편번호 앞 3자리] - [우편번호 뒤 3자리]<br>[기본 주소][상세 주소]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">주민등록번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[주민등록번호 앞 6자리] - [주민등록번호 뒤 7자리]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">외국인등록번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[외국인등록번호 앞 6자리] - [외국인등록번호 뒤 7자리]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">법인번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[법인번호 앞 6자리] - [법인번호 뒤 7자리]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">사업자등록번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[사업자등록번호 앞 3자리] - [사업자등록번호 가운데 2자리] - [사업자등록번호 뒤 5자리]</li>
+                            </ul>
+    
+                            <h4 class="g-h4">카드번호</h4>
+                            <ul class="g-desc-list">
+                                <li>[카드번호 첫번째 4자리] - [카드번호 두번째 4자리] - [카드번호 세번째 4자리] - [카드번호 네번째 4자리]</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //section2 -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
